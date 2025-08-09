@@ -1,5 +1,6 @@
-````markdown
 # 📊 Prompt Engineering on GSM8K with GPT-3.5 & DSPy
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<your-username>/prompt-eng-gsm8k-gpt3.5-dspy/blob/main/examples/gsm8k_colab.ipynb)
 
 **Author:** Meenatchi Sundari  
 **Repo:** `prompt-eng-gsm8k-gpt3.5-dspy`
@@ -59,26 +60,26 @@ prompt-eng-gsm8k-gpt3.5-dspy/
 │   ├── improvements/          # Advanced techniques
 │   └── finetune/              # Fine-tuning pipeline
 ├── configs/                   # YAML configs for experiments
+├── examples/                  # Notebooks & Colab demos
+│   └── gsm8k_colab.ipynb
 ├── tests/                     # Unit tests
 ├── requirements.txt
 ├── README.md
 ├── LICENSE
 └── .gitignore
-````
+```
 
 ---
 
 ## 🔧 Installation
 
 **Clone the repository**
-
 ```bash
 git clone https://github.com/<your-username>/prompt-eng-gsm8k-gpt3.5-dspy.git
 cd prompt-eng-gsm8k-gpt3.5-dspy
 ```
 
 **Create and activate virtual environment**
-
 ```bash
 python -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
@@ -87,7 +88,6 @@ pip install -r requirements.txt
 ```
 
 **Set your API key**
-
 ```bash
 export OPENAI_API_KEY="sk-..."   # Linux / Mac
 # PowerShell (Windows):
@@ -99,23 +99,16 @@ export OPENAI_API_KEY="sk-..."   # Linux / Mac
 ## ▶️ Usage
 
 **Run benchmarks with default config**
-
 ```bash
 python -m gsm8k_bench.cli run --config configs/default.yaml
 ```
 
 **Run with custom parameters**
-
 ```bash
-python -m gsm8k_bench.cli run \
-  --n-samples 50 \
-  --techniques zero-shot few-shot cot prolog \
-  --model gpt-3.5-turbo \
-  --temperature 0.0
+python -m gsm8k_bench.cli run   --n-samples 50   --techniques zero-shot few-shot cot prolog   --model gpt-3.5-turbo   --temperature 0.0
 ```
 
 **Run fine-tuning pipeline**
-
 ```bash
 python -m gsm8k_bench.cli finetune --config configs/finetune.yaml
 ```
@@ -124,14 +117,14 @@ python -m gsm8k_bench.cli finetune --config configs/finetune.yaml
 
 ## 📊 Example Results
 
-| Technique              | Accuracy (%) | Avg Time (s) | Efficiency |
-| ---------------------- | ------------ | ------------ | ---------- |
-| Zero-Shot              | 55.0         | 1.2          | 45.8       |
-| Few-Shot               | 60.5         | 1.3          | 46.5       |
-| Chain-of-Thought       | 68.0         | 2.5          | 27.2       |
-| Self-Consistency (n=5) | 72.5         | 8.0          | 9.0        |
-| Prolog-Style           | 71.0         | 3.0          | 23.7       |
-| Enhanced Prolog        | **74.5**     | 3.5          | 21.3       |
+| Technique                  | Accuracy (%) | Avg Time (s) | Efficiency |
+|----------------------------|--------------|--------------|------------|
+| Zero-Shot                  | 55.0         | 1.2          | 45.8       |
+| Few-Shot                   | 60.5         | 1.3          | 46.5       |
+| Chain-of-Thought           | 68.0         | 2.5          | 27.2       |
+| Self-Consistency (n=5)     | 72.5         | 8.0          | 9.0        |
+| Prolog-Style               | 71.0         | 3.0          | 23.7       |
+| Enhanced Prolog            | **74.5**     | 3.5          | 21.3       |
 
 *(Numbers are illustrative — actual results depend on model/config)*
 
@@ -140,21 +133,20 @@ python -m gsm8k_bench.cli finetune --config configs/finetune.yaml
 ## 📈 Visualizations
 
 The `viz.py` module generates:
-
-* Accuracy comparison bar charts
-* Response time plots
-* Accuracy vs Time scatter plots
-* Heatmaps for multi-technique analysis
+- Accuracy comparison bar charts
+- Response time plots
+- Accuracy vs Time scatter plots
+- Heatmaps for multi-technique analysis
 
 ---
 
 ## 📚 References
 
-* [GSM8K Dataset](https://huggingface.co/datasets/openai/gsm8k)
-* [Prompt Engineering Guide](https://www.promptingguide.ai/)
-* [DSPy GitHub](https://github.com/stanfordnlp/dspy)
-* [Google Prompt Engineering Docs](https://developers.google.com/machine-learning/resources/prompt-eng)
-* [Microsoft Prompt Docs](https://learn.microsoft.com/en-us/semantic-kernel/prompts/)
+- [GSM8K Dataset](https://huggingface.co/datasets/openai/gsm8k)
+- [Prompt Engineering Guide](https://www.promptingguide.ai/)
+- [DSPy GitHub](https://github.com/stanfordnlp/dspy)
+- [Google Prompt Engineering Docs](https://developers.google.com/machine-learning/resources/prompt-eng)
+- [Microsoft Prompt Docs](https://learn.microsoft.com/en-us/semantic-kernel/prompts/)
 
 ---
 
@@ -163,12 +155,3 @@ The `viz.py` module generates:
 This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
 
 ---
-
-```
-
----
-
-If you want, I can **add a “Run in Colab” badge** so people can try it instantly without installing anything — that’s a good touch for making your README more attractive to visitors.  
-
-Do you want me to add that?
-```

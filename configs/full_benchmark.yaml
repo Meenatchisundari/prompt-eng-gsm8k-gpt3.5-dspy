@@ -1,0 +1,38 @@
+# Full benchmark configuration for comprehensive evaluation
+
+# Model configuration
+model:
+  name: "gpt-3.5-turbo"
+  temperature: 0.0
+  max_tokens: 1000
+
+# Benchmark settings
+benchmark:
+  n_samples: 100
+  timeout_seconds: 45
+  techniques:
+    - zero_shot
+    - few_shot
+    - cot
+    - self_consistency
+    - prolog_style
+
+# Self-consistency with more samples for robustness
+self_consistency:
+  n_samples: 7
+  temperature: 0.7
+
+# Evaluation settings
+evaluation:
+  accuracy_threshold: 0.01
+  save_detailed_predictions: true
+  run_error_analysis: true
+
+# Output settings
+output:
+  create_visualizations: true
+  save_plots: true
+  create_heatmap: true
+  export_csv: true
+  export_detailed_predictions: true
+  generate_report: true

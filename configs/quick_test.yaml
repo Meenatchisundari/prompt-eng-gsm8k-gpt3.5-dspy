@@ -1,0 +1,32 @@
+# Quick test configuration for rapid prototyping
+
+# Model configuration
+model:
+  name: "gpt-3.5-turbo"
+  temperature: 0.0
+  max_tokens: 500
+
+# Benchmark settings
+benchmark:
+  n_samples: 10
+  timeout_seconds: 15
+  techniques:
+    - zero_shot
+    - cot
+    - prolog_style
+
+# Self-consistency disabled for speed
+self_consistency:
+  n_samples: 3
+  temperature: 0.5
+
+# Evaluation settings
+evaluation:
+  accuracy_threshold: 0.01
+  save_detailed_predictions: false
+
+# Output settings
+output:
+  create_visualizations: false
+  save_plots: false
+  export_csv: true

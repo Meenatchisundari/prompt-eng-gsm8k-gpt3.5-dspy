@@ -1,3 +1,6 @@
+"""
+Command-line interface for GSM8K benchmarking.
+"""
 import click
 import os
 import sys

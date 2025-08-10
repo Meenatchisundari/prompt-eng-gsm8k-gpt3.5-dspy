@@ -126,11 +126,10 @@ python -m gsm8k_bench.cli finetune --config configs/finetune.yaml
 | Prolog-Style               | 71.0         | 3.0          | 23.7       |
 | Enhanced Prolog            | **74.5**     | 3.5          | 21.3       |
 
-*(Numbers are illustrative — actual results depend on model/config)*
 
 ---
 
-## 📈 Visualizations
+## 📈 Visualisations
 
 The `viz.py` module generates:
 - Accuracy comparison bar charts

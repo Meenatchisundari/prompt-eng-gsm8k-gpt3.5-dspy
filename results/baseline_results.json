@@ -1,0 +1,195 @@
+{
+  "metadata": {
+    "evaluation_date": "2024-01-15T10:30:00Z",
+    "model": "gpt-3.5-turbo",
+    "model_version": "gpt-3.5-turbo-0613",
+    "temperature": 0.0,
+    "max_tokens": 1000,
+    "dataset": "GSM8K",
+    "dataset_split": "test",
+    "total_problems": 100,
+    "evaluator_version": "1.2.0"
+  },
+  "results": {
+    "1. Zero-Shot": {
+      "technique": "Zero-Shot",
+      "accuracy": 0.45,
+      "correct": 45,
+      "total": 100,
+      "avg_time": 1.5,
+      "error_rate": 0.032,
+      "token_usage": {
+        "avg_input_tokens": 45,
+        "avg_output_tokens": 25,
+        "total_tokens": 7000
+      },
+      "cost_estimate": 1.40,
+      "confidence_interval": [0.35, 0.55]
+    },
+    "2. Few-Shot": {
+      "technique": "Few-Shot", 
+      "accuracy": 0.58,
+      "correct": 58,
+      "total": 100,
+      "avg_time": 1.8,
+      "error_rate": 0.028,
+      "token_usage": {
+        "avg_input_tokens": 180,
+        "avg_output_tokens": 30,
+        "total_tokens": 21000
+      },
+      "cost_estimate": 4.20,
+      "confidence_interval": [0.48, 0.68]
+    },
+    "3. Chain-of-Thought": {
+      "technique": "Chain-of-Thought",
+      "accuracy": 0.65,
+      "correct": 65,
+      "total": 100,
+      "avg_time": 2.3,
+      "error_rate": 0.023,
+      "token_usage": {
+        "avg_input_tokens": 55,
+        "avg_output_tokens": 120,
+        "total_tokens": 17500
+      },
+      "cost_estimate": 3.50,
+      "confidence_interval": [0.55, 0.74]
+    },
+    "4. Self-Consistency": {
+      "technique": "Self-Consistency",
+      "accuracy": 0.68,
+      "correct": 68,
+      "total": 100,
+      "avg_time": 8.5,
+      "error_rate": 0.012,
+      "token_usage": {
+        "avg_input_tokens": 275,
+        "avg_output_tokens": 600,
+        "total_tokens": 87500
+      },
+      "cost_estimate": 17.50,
+      "confidence_interval": [0.58, 0.77]
+    },
+    "5. Prolog-Style": {
+      "technique": "Prolog-Style",
+      "accuracy": 0.71,
+      "correct": 71,
+      "total": 100,
+      "avg_time": 2.1,
+      "error_rate": 0.021,
+      "token_usage": {
+        "avg_input_tokens": 75,
+        "avg_output_tokens": 150,
+        "total_tokens": 22500
+      },
+      "cost_estimate": 4.50,
+      "confidence_interval": [0.61, 0.80]
+    }
+  },
+  "statistical_analysis": {
+    "pairwise_comparisons": {
+      "zero_shot_vs_few_shot": {
+        "p_value": 0.0234,
+        "effect_size": 0.267,
+        "significant": true
+      },
+      "few_shot_vs_cot": {
+        "p_value": 0.1823,
+        "effect_size": 0.145,
+        "significant": false
+      },
+      "cot_vs_self_consistency": {
+        "p_value": 0.5234,
+        "effect_size": 0.062,
+        "significant": false
+      },
+      "self_consistency_vs_prolog": {
+        "p_value": 0.5834,
+        "effect_size": 0.063,
+        "significant": false
+      },
+      "zero_shot_vs_prolog": {
+        "p_value": 0.0001,
+        "effect_size": 0.541,
+        "significant": true
+      }
+    },
+    "anova": {
+      "f_statistic": 12.45,
+      "p_value": 0.0001,
+      "df_between": 4,
+      "df_within": 495
+    },
+    "performance_ranking": [
+      "5. Prolog-Style",
+      "4. Self-Consistency", 
+      "3. Chain-of-Thought",
+      "2. Few-Shot",
+      "1. Zero-Shot"
+    ]
+  },
+  "error_analysis": {
+    "5. Prolog-Style": {
+      "total_errors": 29,
+      "error_categories": {
+        "calculation_errors": 10,
+        "reading_comprehension": 8,
+        "incomplete_reasoning": 6,
+        "format_issues": 5
+      },
+      "common_patterns": [
+        "Multi-step arithmetic mistakes",
+        "Misunderstanding of problem constraints",
+        "Missing intermediate steps"
+      ]
+    },
+    "overall_error_trends": {
+      "most_difficult_problem_types": [
+        "Multi-step word problems",
+        "Percentage calculations", 
+        "Time/rate problems"
+      ],
+      "easiest_problem_types": [
+        "Simple arithmetic",
+        "Basic addition/subtraction"
+      ]
+    }
+  },
+  "efficiency_metrics": {
+    "cost_effectiveness": {
+      "1. Zero-Shot": 32.14,
+      "2. Few-Shot": 13.81,
+      "3. Chain-of-Thought": 18.57,
+      "4. Self-Consistency": 3.89,
+      "5. Prolog-Style": 15.78
+    },
+    "time_efficiency": {
+      "1. Zero-Shot": 30.00,
+      "2. Few-Shot": 32.22,
+      "3. Chain-of-Thought": 28.26,
+      "4. Self-Consistency": 8.00,
+      "5. Prolog-Style": 33.81
+    }
+  },
+  "recommendations": {
+    "production_deployment": {
+      "recommended_technique": "5. Prolog-Style",
+      "reasoning": "Highest accuracy with reasonable computational cost",
+      "expected_accuracy": "71%",
+      "relative_cost": "1.8x baseline"
+    },
+    "cost_conscious": {
+      "recommended_technique": "1. Zero-Shot",
+      "reasoning": "Lowest cost with acceptable baseline performance",
+      "expected_accuracy": "45%", 
+      "relative_cost": "1.0x baseline"
+    },
+    "balanced": {
+      "recommended_technique": "3. Chain-of-Thought",
+      "reasoning": "Good balance of accuracy and cost-effectiveness",
+      "expected_accuracy": "65%",
+      "relative_cost": "1.4x baseline"
+    }
+  }
+}

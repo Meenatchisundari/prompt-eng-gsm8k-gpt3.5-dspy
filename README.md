@@ -75,7 +75,7 @@ prompt-eng-gsm8k-gpt3.5-dspy/
 
 **Clone the repository**
 ```bash
-git clone https://github.com/<your-username>/prompt-eng-gsm8k-gpt3.5-dspy.git
+git clone https://github.com/Meenatchisundari/prompt-eng-gsm8k-gpt3.5-dspy.git
 cd prompt-eng-gsm8k-gpt3.5-dspy
 ```
 

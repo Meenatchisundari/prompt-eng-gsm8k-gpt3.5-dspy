@@ -1,6 +1,6 @@
 # 📊 Prompt Engineering on GSM8K with GPT-3.5 & DSPy
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<your-username>/prompt-eng-gsm8k-gpt3.5-dspy/blob/main/examples/gsm8k_colab.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Meenatchisundari/prompt-eng-gsm8k-gpt3.5-dspy/blob/main/examples/gsm8k_colab.ipynb)
 
 **Author:** Meenatchi Sundari  
 **Repo:** `prompt-eng-gsm8k-gpt3.5-dspy`

@@ -18,7 +18,7 @@ setup(
     description="A comprehensive benchmark for prompting techniques on GSM8K math problems",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/meenatchisundari/prompt-eng-gsm8k-gpt3.5-dspy",
+    url="https://github.com/Meenatchisundari/prompt-eng-gsm8k-gpt3.5-dspy", 
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     classifiers=[

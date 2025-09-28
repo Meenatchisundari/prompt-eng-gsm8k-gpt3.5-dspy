@@ -13,12 +13,12 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 setup(
     name="gsm8k-bench",
     version="0.1.0",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Meenatchi Sundari",
+    author_email="meenatchisundarimuthirulappan@gmail.com",
     description="A comprehensive benchmark for prompting techniques on GSM8K math problems",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/prompt-eng-gsm8k-gpt3.5-dspy",
+    url="https://github.com/meenatchisundari/prompt-eng-gsm8k-gpt3.5-dspy",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     classifiers=[
